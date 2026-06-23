@@ -5,14 +5,16 @@ export default function Footer() {
   return (
     <Flex
       as="footer"
-      py={2}
+      py={5}
       w="100%"
-      h="full"
-      bg="black"
-      color="white"
+      bg="#091018"
+      color="whiteAlpha.900"
       direction="column"
       justifyContent="center"
       alignItems="center"
+      gap={1}
+      borderTop="1px solid"
+      borderColor="whiteAlpha.100"
     >
       <Text>
         本网站上的所有测试都基于此{" "}
@@ -31,14 +33,14 @@ export default function Footer() {
       <Text>
         Made by{" "}
         <Link
-          href="https://github.com/vsme"
+          href="https://github.com/EasonZhan-max/mbti"
           target="_blank"
         >
           <Button
             colorScheme="primary"
             variant="link"
           >
-            vsme
+            Eason
           </Button>
         </Link>
       </Text>

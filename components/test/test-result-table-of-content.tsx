@@ -41,9 +41,16 @@ export default function TestResultTableOfContent() {
         base: "25%",
       }}
       h="min-content"
-      p={2}
+      p={4}
       gap={4}
       top={5}
+      border="1px solid"
+      borderColor="whiteAlpha.200"
+      rounded="24px"
+      bg="rgba(18, 25, 31, .62)"
+      color="whiteAlpha.900"
+      backdropFilter="blur(22px) saturate(150%)"
+      boxShadow="0 24px 80px rgba(0, 0, 0, .32)"
       direction="column"
       pos="sticky"
       alignSelf="flex-start"
@@ -59,11 +66,11 @@ export default function TestResultTableOfContent() {
             fontSize="sm"
             cursor="pointer"
             _hover={{
-              borderLeft: "4px solid black",
+              borderLeft: "4px solid rgba(159, 185, 201, .9)",
               pl: 2,
             }}
             {...(heading.id === activeId && {
-              color: "primary.500",
+              color: "primary.100",
               fontWeight: "bold",
             })}
             onClick={(event) =>

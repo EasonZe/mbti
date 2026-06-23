@@ -22,7 +22,8 @@ function ScoreStats(props: {
       gap={2}
       rounded="md"
       justifyContent="space-between"
-      bg="white"
+      bg="whiteAlpha.900"
+      color="gray.800"
     >
       <Text fontWeight="semibold">
         {((testScoresFiltered.length / props.testScores.length) * 100)
@@ -56,9 +57,16 @@ export default function TestResultStats(props: TestResultStatsProps) {
         lg: "25%",
       }}
       h="min-content"
-      p={2}
+      p={4}
       gap={4}
       top={5}
+      border="1px solid"
+      borderColor="whiteAlpha.200"
+      rounded="24px"
+      bg="rgba(18, 25, 31, .62)"
+      color="whiteAlpha.900"
+      backdropFilter="blur(22px) saturate(150%)"
+      boxShadow="0 24px 80px rgba(0, 0, 0, .32)"
       direction="column"
       pos={{
         base: "static",

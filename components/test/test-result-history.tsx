@@ -18,11 +18,19 @@ export default function TestResultHistory(props: TestResultHistoryProps) {
         lg: "50%",
       }}
       h="full"
-      px={8}
+      px={{ base: 5, md: 8 }}
+      py={8}
       gap={8}
       alignSelf="flex-start"
       alignItems="center"
       direction="column"
+      border="1px solid"
+      borderColor="whiteAlpha.200"
+      rounded="28px"
+      bg="rgba(18, 25, 31, .62)"
+      color="whiteAlpha.900"
+      backdropFilter="blur(22px) saturate(150%)"
+      boxShadow="0 24px 80px rgba(0, 0, 0, .32)"
     >
       <Heading
         as="h1"
@@ -43,14 +51,16 @@ export default function TestResultHistory(props: TestResultHistoryProps) {
             py={2}
             px={4}
             w="full"
-            rounded="md"
+            rounded="18px"
             cursor="pointer"
             alignItems="center"
             justifyContent="space-between"
             borderWidth={1}
-            borderColor="black"
+            borderColor="whiteAlpha.200"
+            bg="whiteAlpha.100"
             _hover={{
-              bg: "gray.100",
+              bg: "whiteAlpha.200",
+              transform: "translateY(-1px)",
             }}
           >
             <Text>

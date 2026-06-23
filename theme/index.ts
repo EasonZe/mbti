@@ -3,21 +3,34 @@ import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme({
   colors: {
     primary: {
-      "50": "#f2f8fd",
-      "100": "#e3effb",
-      "200": "#c1dff6",
-      "300": "#8ac5ef",
-      "400": "#4ca7e4",
-      "500": "#4298ff",
-      "600": "#176fb2",
-      "700": "#145990",
-      "800": "#144c78",
-      "900": "#164064",
+      "50": "#f4f9fb",
+      "100": "#e6f1f6",
+      "200": "#c9dbe6",
+      "300": "#b8cedb",
+      "400": "#9fb9c9",
+      "500": "#8ab0c8",
+      "600": "#6f96ac",
+      "700": "#567789",
+      "800": "#314a59",
+      "900": "#17232c",
     },
   },
   fonts: {
     heading: `Poppins, sans-serif`,
     body: `'Poppins', sans-serif`,
+  },
+  styles: {
+    global: {
+      "html, body": {
+        background: "#091018",
+      },
+      "#__next": {
+        minHeight: "100vh",
+      },
+      "::selection": {
+        background: "rgba(159, 185, 201, .35)",
+      },
+    },
   },
 });
 

@@ -29,12 +29,16 @@ export default function TestTimer() {
   return (
     <Flex
       width={110}
-      px={2}
+      px={3}
+      h={10}
       columnGap={2}
       justifyContent="flex-start"
       alignItems="center"
-      borderColor="blackAlpha.300"
-      rounded="md"
+      border="1px solid"
+      borderColor="whiteAlpha.200"
+      rounded="14px"
+      bg="whiteAlpha.100"
+      color="whiteAlpha.900"
     >
       <FiClock size={20} />
       <Text fontWeight="bold">

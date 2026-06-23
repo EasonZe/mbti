@@ -35,10 +35,18 @@ export default function TestResult(props: TestResultProps) {
         lg: "50%",
       }}
       h="full"
-      px={8}
+      px={{ base: 5, md: 8 }}
+      py={8}
       gap={4}
       alignItems="center"
       direction="column"
+      border="1px solid"
+      borderColor="whiteAlpha.200"
+      rounded="28px"
+      bg="rgba(18, 25, 31, .62)"
+      color="whiteAlpha.900"
+      backdropFilter="blur(22px) saturate(150%)"
+      boxShadow="0 24px 80px rgba(0, 0, 0, .32)"
     >
       <Heading
         id={personalityClassGroup.type}
@@ -47,7 +55,7 @@ export default function TestResult(props: TestResultProps) {
       >
         <Highlight
           query={personalityClassGroup.type}
-          styles={{ color: "primary.500" }}
+          styles={{ color: "primary.100" }}
         >
           { `${personalityClassGroup.type}` }
           {/* {`${personalityClassGroup.type} - ${personalityClassGroup.name}`} */}

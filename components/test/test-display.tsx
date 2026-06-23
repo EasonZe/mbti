@@ -24,8 +24,9 @@ export default function TestDisplay() {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      gap={2}
+      gap={4}
       px={1}
+      py={6}
     >
       <TestMenu
         onShowInstructionsButtonClick={handleShowInstructionsButtonClick}
@@ -35,7 +36,17 @@ export default function TestDisplay() {
           lg: "50%",
           base: "100%",
         }}
+        minH={{ base: "auto", lg: "560px" }}
         h="full"
+        px={{ base: 5, md: 8 }}
+        py={{ base: 6, md: 8 }}
+        border="1px solid"
+        borderColor="whiteAlpha.200"
+        rounded="28px"
+        bg="rgba(18, 25, 31, .58)"
+        color="whiteAlpha.900"
+        backdropFilter="blur(22px) saturate(150%)"
+        boxShadow="0 24px 80px rgba(0, 0, 0, .32)"
       >
         {showTestInstructions ? (
           <TestInstructions
