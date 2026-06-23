@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { ReactNode } from "react";
-import { Flex, Box } from "@chakra-ui/react";
+import { Flex, Box, useColorModeValue } from "@chakra-ui/react";
 
 import Nav from "../common/nav";
 import Footer from "../common/footer";
@@ -13,6 +13,8 @@ interface MainLayoutProps {
 
 export default function MainLayout(props: MainLayoutProps) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const pageBg = useColorModeValue("#eef5f8", "#091018");
+  const pageColor = useColorModeValue("gray.800", "whiteAlpha.900");
 
   return (
     <>
@@ -36,8 +38,8 @@ export default function MainLayout(props: MainLayoutProps) {
         minH="100vh"
         position="relative"
         overflow="hidden"
-        bg="#091018"
-        color="whiteAlpha.900"
+        bg={pageBg}
+        color={pageColor}
       >
         <EasonBackground />
         <Box

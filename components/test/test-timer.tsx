@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import { FiClock } from "react-icons/fi";
 import { Option } from "@swan-io/boxed";
 import dayjs from "dayjs";
@@ -10,6 +10,9 @@ export default function TestTimer() {
   const [elapsedTime, setElapsedTime] = useState<Option<dayjs.Dayjs>>(
     Option.None()
   );
+  const timerBg = useColorModeValue("rgba(255, 255, 255, .76)", "whiteAlpha.100");
+  const timerBorder = useColorModeValue("blackAlpha.100", "whiteAlpha.200");
+  const timerColor = useColorModeValue("gray.800", "whiteAlpha.900");
 
   useEffect(() => {
     if (elapsedTime.isNone()) {
@@ -35,10 +38,10 @@ export default function TestTimer() {
       justifyContent="flex-start"
       alignItems="center"
       border="1px solid"
-      borderColor="whiteAlpha.200"
+      borderColor={timerBorder}
       rounded="14px"
-      bg="whiteAlpha.100"
-      color="whiteAlpha.900"
+      bg={timerBg}
+      color={timerColor}
     >
       <FiClock size={20} />
       <Text fontWeight="bold">

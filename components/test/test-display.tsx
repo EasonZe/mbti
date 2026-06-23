@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Flex } from "@chakra-ui/react";
+import { Flex, useColorModeValue } from "@chakra-ui/react";
 
 import TestMenu from "./test-menu";
 import TestInstructions from "./test-instructions";
@@ -7,6 +7,9 @@ import TestQuestion from "./test-question";
 
 export default function TestDisplay() {
   const [showTestInstructions, setShowTestInstructions] = useState(true);
+  const panelBg = useColorModeValue("rgba(255, 255, 255, .76)", "rgba(18, 25, 31, .58)");
+  const panelBorder = useColorModeValue("blackAlpha.100", "whiteAlpha.200");
+  const panelColor = useColorModeValue("gray.800", "whiteAlpha.900");
 
   function handleShowInstructionsButtonClick() {
     setShowTestInstructions(true);
@@ -41,12 +44,12 @@ export default function TestDisplay() {
         px={{ base: 5, md: 8 }}
         py={{ base: 6, md: 8 }}
         border="1px solid"
-        borderColor="whiteAlpha.200"
+        borderColor={panelBorder}
         rounded="28px"
-        bg="rgba(18, 25, 31, .58)"
-        color="whiteAlpha.900"
+        bg={panelBg}
+        color={panelColor}
         backdropFilter="blur(22px) saturate(150%)"
-        boxShadow="0 24px 80px rgba(0, 0, 0, .32)"
+        boxShadow="0 24px 80px rgba(0, 0, 0, .18)"
       >
         {showTestInstructions ? (
           <TestInstructions

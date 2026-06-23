@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import { useRadioGroup, Flex, Text, Button } from "@chakra-ui/react";
+import { useRadioGroup, Flex, Text, Button, useColorModeValue } from "@chakra-ui/react";
 
 import TestProgress from "./test-progress";
 import TestAnswerOption from "./test-answer-option";
@@ -15,6 +15,10 @@ import useUserTestAnswersStore from "../../store/use-user-test-answers";
 
 export default function TestQuestion() {
   const router = useRouter();
+  const controlBg = useColorModeValue("rgba(255, 255, 255, .78)", "whiteAlpha.100");
+  const controlHoverBg = useColorModeValue("rgba(230, 241, 246, .96)", "whiteAlpha.200");
+  const controlBorder = useColorModeValue("blackAlpha.100", "whiteAlpha.200");
+  const controlColor = useColorModeValue("gray.800", "whiteAlpha.900");
 
   const { userTestAnswers, setUserTestAnswers } = useUserTestAnswersStore();
 
@@ -146,6 +150,12 @@ export default function TestQuestion() {
         <Button
           w="full"
           variant="solid"
+          bg={controlBg}
+          color={controlColor}
+          border="1px solid"
+          borderColor={controlBorder}
+          _hover={{ bg: controlHoverBg }}
+          _disabled={{ opacity: 0.45, cursor: "not-allowed" }}
           {...(currentPersonalityTestIndex === 0 && {
             disabled: true,
           })}
@@ -158,6 +168,7 @@ export default function TestQuestion() {
           <Button
             w="full"
             colorScheme="primary"
+            color="white"
             onClick={handleSeeResultButtonClick}
           >
             查看结果
@@ -166,7 +177,9 @@ export default function TestQuestion() {
           <Button
             w="full"
             colorScheme="primary"
+            color="white"
             variant="solid"
+            _disabled={{ opacity: 0.45, cursor: "not-allowed" }}
             {...(!isUserAlreadyPickAnswer && {
               disabled: true,
             })}

@@ -1,10 +1,25 @@
 import Link from "next/link";
-import { Heading, Text, Highlight, Flex, Button, Box } from "@chakra-ui/react";
+import {
+  Heading,
+  Text,
+  Highlight,
+  Flex,
+  Button,
+  Box,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { FiArrowRight } from "react-icons/fi";
 
 import MainLayout from "../components/layouts/main-layout";
 
 export default function HomePage() {
+  const cardBg = useColorModeValue("rgba(255, 255, 255, .72)", "rgba(18, 25, 31, .56)");
+  const cardBorder = useColorModeValue("blackAlpha.100", "whiteAlpha.200");
+  const headingColor = useColorModeValue("gray.900", "white");
+  const labelColor = useColorModeValue("primary.700", "primary.100");
+  const highlightBg = useColorModeValue("rgba(201, 219, 230, .42)", "rgba(159, 185, 201, .22)");
+  const highlightColor = useColorModeValue("primary.900", "white");
+
   return (
     <MainLayout>
       <Flex
@@ -20,16 +35,17 @@ export default function HomePage() {
           px={{ base: 6, md: 12 }}
           py={{ base: 10, md: 14 }}
           border="1px solid"
-          borderColor="whiteAlpha.200"
+          borderColor={cardBorder}
           rounded="32px"
-          bg="rgba(18, 25, 31, .56)"
+          bg={cardBg}
+          color={headingColor}
           backdropFilter="blur(22px) saturate(150%)"
-          boxShadow="0 24px 80px rgba(0, 0, 0, .32)"
+          boxShadow="0 24px 80px rgba(0, 0, 0, .18)"
           textAlign="center"
         >
           <Text
             mb={4}
-            color="primary.100"
+            color={labelColor}
             fontWeight="900"
             letterSpacing=".18em"
             textTransform="uppercase"
@@ -48,26 +64,19 @@ export default function HomePage() {
                 py: 1,
                 px: 4,
                 rounded: "full",
-                bg: "rgba(159, 185, 201, .22)",
-                color: "white",
+                bg: highlightBg,
+                color: highlightColor,
               }}
             >
               参加 MBTI 性格测试
             </Highlight>
           </Heading>
-          <Text
-            mt={6}
-            fontSize={{ base: "lg", md: "xl" }}
-            color="whiteAlpha.800"
-            align="center"
-          >
-            沿用 easonzhan.xyz 的雾蓝星辰背景，快速了解自己的性格倾向。
-          </Text>
           <Link href="/test">
             <Button
               mt={10}
               w="max-content"
               colorScheme="primary"
+              color="white"
               variant="solid"
               size="lg"
               rounded="18px"
