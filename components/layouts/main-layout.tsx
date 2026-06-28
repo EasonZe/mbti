@@ -37,7 +37,6 @@ export default function MainLayout(props: MainLayoutProps) {
         <Box
           position="relative"
           zIndex={1}
-          minH="100vh"
           display="flex"
           flexDirection="column"
         >
@@ -45,13 +44,13 @@ export default function MainLayout(props: MainLayoutProps) {
           <Flex
             as="main"
             w="100%"
-            flex="1"
+            minH={{ base: "calc(100vh - 102px)", md: "calc(100vh - 116px)" }}
             justifyContent="center"
             alignItems={props.lockViewport ? { base: "center", lg: "stretch" } : "center"}
             position="relative"
             px={{ base: 3, md: 6 }}
             pt={{ base: "94px", md: "102px" }}
-            pb={{ base: 4, md: 5 }}
+            pb={{ base: 6, md: 8 }}
             overflow={props.lockViewport ? { base: "visible", lg: "hidden" } : "visible"}
           >
             {props.children}
