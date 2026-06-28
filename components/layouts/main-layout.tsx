@@ -29,31 +29,36 @@ export default function MainLayout(props: MainLayoutProps) {
       <Box
         w="full"
         minH="100vh"
-        h={props.lockViewport ? { base: "auto", lg: "100vh" } : "auto"}
         position="relative"
-        overflow={props.lockViewport ? { base: "auto", lg: "hidden" } : "auto"}
         bg={pageBg}
         color={pageColor}
       >
         {!props.hideBackground && <EasonBackground />}
-        <Box position="relative" zIndex={1} minH="100vh">
+        <Box
+          position="relative"
+          zIndex={1}
+          minH="100vh"
+          display="flex"
+          flexDirection="column"
+        >
           <Nav />
           <Flex
             as="main"
             w="100%"
-            minH={props.lockViewport ? { base: "calc(100vh - 96px)", lg: "calc(100vh - 96px)" } : "calc(100vh - 96px)"}
-            h={props.lockViewport ? { base: "auto", lg: "calc(100vh - 96px)" } : "auto"}
+            flex="1"
             justifyContent="center"
             alignItems={props.lockViewport ? { base: "center", lg: "stretch" } : "center"}
             position="relative"
             px={{ base: 3, md: 6 }}
+            pt={{ base: "94px", md: "102px" }}
+            pb={{ base: 4, md: 5 }}
             overflow={props.lockViewport ? { base: "visible", lg: "hidden" } : "visible"}
           >
             {props.children}
           </Flex>
+          {!props.hideFooter && <Footer />}
         </Box>
       </Box>
-      {!props.hideFooter && <Footer />}
     </>
   );
 }

@@ -11,12 +11,12 @@ export default function TestMenu(props: TestMenuProps) {
   return (
     <Flex
       width="full"
-      my={2}
-      px={4}
+      my={0}
+      px={2}
       direction="column"
       justifyContent="center"
       alignItems="center"
-      gap={2}
+      gap={1}
       position="relative"
       zIndex={2}
     >

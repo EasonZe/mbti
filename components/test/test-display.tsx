@@ -27,22 +27,22 @@ export default function TestDisplay() {
       direction="column"
       justifyContent="center"
       alignItems="center"
-      gap={4}
+      gap={3}
       px={1}
-      py={6}
+      py={2}
     >
       <TestMenu
         onShowInstructionsButtonClick={handleShowInstructionsButtonClick}
       />
       <Flex
         w={{
-          lg: "50%",
+          lg: "48%",
           base: "100%",
         }}
-        minH={{ base: "auto", lg: "560px" }}
+        minH={{ base: "auto", lg: "420px" }}
         h="full"
-        px={{ base: 5, md: 8 }}
-        py={{ base: 6, md: 8 }}
+        px={{ base: 4, md: 6 }}
+        py={{ base: 4, md: 5 }}
         border="1px solid"
         borderColor={borderColor}
         rounded="28px"

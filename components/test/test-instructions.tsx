@@ -17,17 +17,17 @@ export default function TestInstructions(props: TestInstructionsProps) {
       h="full"
       px={4}
       direction="column"
-      gap={8}
+      gap={5}
     >
-      <Heading>说明</Heading>
+      <Heading fontSize={{ base: "3xl", md: "4xl" }}>说明</Heading>
       <Flex
         direction="column"
         gap={2}
       >
-        <Text>
+        <Text fontSize={{ base: "md", md: "lg" }}>
           完成测试大约只需要15分钟。以下是一些完成这个测试的提示：
         </Text>
-        <UnorderedList spacing={2}>
+        <UnorderedList spacing={2} fontSize={{ base: "md", md: "lg" }}>
           <ListItem>
             这些问题没有正确答案。
           </ListItem>
@@ -40,6 +40,7 @@ export default function TestInstructions(props: TestInstructionsProps) {
         </UnorderedList>
       </Flex>
       <Button
+        size="md"
         w="min-content"
         colorScheme="primary"
         alignSelf="flex-end"

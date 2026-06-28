@@ -22,17 +22,17 @@ export default function HomePage() {
     <MainLayout>
       <Flex
         w="full"
-        minH="calc(100vh - 112px)"
+        minH="auto"
         alignItems="center"
         justifyContent="center"
         px={{ base: 2, md: 4 }}
-        py={{ base: 12, md: 16 }}
+        py={{ base: 2, md: 3 }}
       >
         <Box
-          w="min(920px, 100%)"
-          minH={{ base: "430px", md: "560px" }}
-          px={{ base: 6, md: 12 }}
-          py={{ base: 10, md: 14 }}
+          w="min(860px, 100%)"
+          minH={{ base: "360px", md: "460px" }}
+          px={{ base: 5, md: 10 }}
+          py={{ base: 7, md: 9 }}
           border="1px solid"
           borderColor={borderColor}
           rounded="32px"
@@ -49,7 +49,7 @@ export default function HomePage() {
             as="h1"
             lineHeight="tall"
             textAlign="center"
-            fontSize={{ base: "3xl", md: "5xl" }}
+            fontSize={{ base: "3xl", md: "4xl" }}
           >
             <Highlight
               query="MBTI"
@@ -65,8 +65,8 @@ export default function HomePage() {
             </Highlight>
           </Heading>
           <Text
-            mt={6}
-            fontSize={{ base: "lg", md: "xl" }}
+            mt={4}
+            fontSize={{ base: "md", md: "lg" }}
             color={textColor}
             align="center"
           >
@@ -74,7 +74,7 @@ export default function HomePage() {
           </Text>
           <Link href="/test">
             <Button
-              mt={10}
+              mt={6}
               w="max-content"
               colorScheme="primary"
               variant="solid"
@@ -87,9 +87,9 @@ export default function HomePage() {
           </Link>
 
           <Box
-            mt={8}
+            mt={5}
             px={{ base: 3, md: 4 }}
-            py={{ base: 4, md: 5 }}
+            py={{ base: 3, md: 4 }}
             rounded="22px"
             bg={useColorModeValue("rgba(255,255,255,.44)", "rgba(7,12,18,.42)")}
             border="1px solid"
@@ -97,7 +97,7 @@ export default function HomePage() {
             backdropFilter="blur(12px)"
           >
             <Text
-              fontSize={{ base: "sm", md: "lg" }}
+              fontSize={{ base: "sm", md: "md" }}
               fontWeight="800"
               lineHeight={{ base: "1.7", md: "1.6" }}
               textAlign="center"

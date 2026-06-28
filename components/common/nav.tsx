@@ -26,22 +26,22 @@ export default function Nav() {
   return (
     <Flex
       as="nav"
-      position="sticky"
-      top={4}
+      position="fixed"
+      top={{ base: 3, md: 4 }}
       zIndex={20}
-      mt={4}
-      mx="auto"
+      left="50%"
+      transform="translateX(-50%)"
       py={3}
-      px={{ base: 4, md: 5 }}
-      w="min(1180px, calc(100% - 28px))"
-      minH={16}
+      px={{ base: 3, md: 5 }}
+      w={{ base: "calc(100% - 20px)", md: "min(1180px, calc(100% - 28px))" }}
+      minH={{ base: 14, md: 16 }}
       justifyContent="space-between"
       alignItems="center"
-      gap={4}
+      gap={{ base: 2, md: 4 }}
       overflowX="visible"
       border="1px solid"
       borderColor={borderColor}
-      rounded="24px"
+      rounded={{ base: "22px", md: "24px" }}
       bg={navBg}
       color={navColor}
       backdropFilter="blur(18px) saturate(145%)"
@@ -58,7 +58,7 @@ export default function Nav() {
           MBTI性格测试
         </Button>
       </Link>
-      <Flex gap={3} alignItems="center">
+      <Flex gap={{ base: 2, md: 3 }} alignItems="center">
         <Menu placement="bottom-end">
           <MenuButton
             as={Button}
