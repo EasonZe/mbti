@@ -108,14 +108,13 @@ export default function HomePage() {
               本站为完全免费测试，不收取任何费用。
             </Text>
             <Text fontSize={{ base: "sm", md: "md" }} color={textColor} mb={2} lineHeight="1.7">
-              感谢
+              鸣谢
               <ChakraLink href="https://github.com/vsme" target="_blank" rel="noopener noreferrer" color={linkColor} fontWeight="700" ml={1} mr={1}>
                 Yawei Sun
               </ChakraLink>
-              <ChakraLink href="https://github.com/rauf-21" target="_blank" rel="noopener noreferrer" color={linkColor} fontWeight="700" ml={1} mr={1}>
+              <ChakraLink href="https://github.com/rauf-21" target="_blank" rel="noopener noreferrer" color={linkColor} fontWeight="700" ml={1}>
                 rauf
               </ChakraLink>
-              提供的开源。
             </Text>
             <Text fontSize={{ base: "sm", md: "md" }} color={textColor} mb={2} lineHeight="1.7">
               本站作者
