@@ -1,3 +1,4 @@
+/* 中文标注：测试页顶部小工具栏，包含计时器和说明按钮。 */
 import { Flex, Button } from "@chakra-ui/react";
 import { RiInformationLine } from "react-icons/ri";
 

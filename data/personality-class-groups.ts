@@ -1,3 +1,4 @@
+/* 中文标注：16 种 MBTI 类型的结果说明数据，包括称号、描述、优缺点和建议。 */
 import { PersonalityClassGroup } from "../lib/personality-test";
 
 export const personalityClassGroup: PersonalityClassGroup[] = [

@@ -1,3 +1,4 @@
+/* 中文标注：结果页目录高亮 Hook，用 IntersectionObserver 判断当前阅读到哪个标题。 */
 import { useRef, useState, useEffect } from "react";
 
 export default function useHeadingsObserver() {

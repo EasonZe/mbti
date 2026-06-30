@@ -1,3 +1,4 @@
+/* 中文标注：Chakra UI 主题配置，统一按钮颜色、字体、滚动条和深浅色样式。 */
 import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
 
 const config: ThemeConfig = {

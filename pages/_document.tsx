@@ -1,3 +1,4 @@
+/* 中文标注：Next.js 文档结构入口，设置 HTML 基础结构。 */
 import { Html, Head, Main, NextScript } from "next/document";
 import { ColorModeScript } from "@chakra-ui/react";
 import Script from 'next/script';

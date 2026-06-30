@@ -1,3 +1,4 @@
+/* 中文标注：结果页面路由，根据 URL 中的 testResultId 读取本地结果并展示。 */
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Option, AsyncData, Result } from "@swan-io/boxed";

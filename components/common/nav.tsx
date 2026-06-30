@@ -1,3 +1,4 @@
+/* 中文标注：顶部导航栏组件，包含网站标题、关于菜单、深浅色切换和测试历史入口。 */
 import Link from "next/link";
 import {
   Flex,
@@ -14,6 +15,7 @@ import { FiChevronDown, FiUser } from "react-icons/fi";
 
 import ThemeToggle from "./theme-toggle";
 
+// 中文标注：导航栏固定在顶部，移动端滚动时也会跟随。
 export default function Nav() {
   const navBg = useColorModeValue("rgba(255, 255, 255, .72)", "rgba(9, 16, 24, .58)");
   const navColor = useColorModeValue("#17232c", "white");
@@ -59,6 +61,7 @@ export default function Nav() {
         </Button>
       </Link>
       <Flex gap={{ base: 2, md: 3 }} alignItems="center">
+        {/* 中文标注：关于菜单，目前用于跳转关于站长页面。 */}
         <Menu placement="bottom-end">
           <MenuButton
             as={Button}
@@ -97,6 +100,7 @@ export default function Nav() {
             </MenuItem>
           </MenuList>
         </Menu>
+        {/* 中文标注：深浅色切换按钮。 */}
         <ThemeToggle />
         <Link href="/test/result/history">
           <>

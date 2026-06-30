@@ -1,3 +1,4 @@
+/* 中文标注：测试页外层组件，控制说明面板和正式题目区域的显示。 */
 import { useState } from "react";
 import { Flex, useColorModeValue } from "@chakra-ui/react";
 

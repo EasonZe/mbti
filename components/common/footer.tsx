@@ -1,8 +1,11 @@
+/* 中文标注：网站页脚组件，显示运行时间和版权信息。 */
 import { useEffect, useState } from "react";
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
 
+// 中文标注：网站运行时间起点，按北京时间 2026-06-23 18:00 开始计算。
 const SITE_START_DATE = "2026-06-23T18:00:00+08:00";
 
+// 中文标注：把毫秒差转换成“天 时:分:秒”的显示格式。
 function formatRuntime(ms: number) {
   const totalSeconds = Math.max(0, Math.floor(ms / 1000));
   const days = Math.floor(totalSeconds / (24 * 60 * 60));

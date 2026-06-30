@@ -1,6 +1,8 @@
+/* 中文标注：深浅色切换按钮组件，点击后在浅色/深色模式之间切换。 */
 import { IconButton, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { FiMoon, FiSun } from "react-icons/fi";
 
+// 中文标注：根据当前 colorMode 切换图标和主题。
 export default function ThemeToggle() {
   const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("rgba(255,255,255,.58)", "rgba(255,255,255,0.08)");

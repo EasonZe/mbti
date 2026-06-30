@@ -1,3 +1,4 @@
+/* 中文标注：全站雾蓝星空背景组件，负责深色模式星星、流星、浅色模式柔和渐变。 */
 import { Box, useColorMode } from "@chakra-ui/react";
 import { useEffect, useRef } from "react";
 
@@ -9,6 +10,7 @@ interface Star {
   s: number;
 }
 
+// 中文标注：随机生成一颗星星的位置、大小、透明度变化速度。
 function createStar(width: number, height: number): Star {
   return {
     x: Math.random() * width,
@@ -19,6 +21,7 @@ function createStar(width: number, height: number): Star {
   };
 }
 
+// 中文标注：背景组件本身不参与点击，只作为固定背景层存在。
 export default function EasonBackground() {
   const { colorMode } = useColorMode();
   const isLight = colorMode === "light";
@@ -36,6 +39,7 @@ export default function EasonBackground() {
     let animationFrameId = 0;
     let isMounted = true;
 
+    // 中文标注：窗口尺寸变化时重新设置 Canvas 尺寸，避免背景滚动后才刷新。
     const resize = () => {
       const previousWidth = canvas.clientWidth || window.innerWidth;
       const previousHeight = canvas.clientHeight || window.innerHeight;
@@ -61,6 +65,7 @@ export default function EasonBackground() {
       while (stars.length < target) stars.push(createStar(width, height));
     };
 
+    // 中文标注：每一帧重绘渐变背景和星星闪烁动画。
     const draw = () => {
       if (!isMounted) return;
 

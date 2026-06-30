@@ -1,3 +1,4 @@
+/* 中文标注：测试历史组件，从本地 IndexedDB 读取并显示历史测试记录。 */
 import Link from "next/link";
 import { Flex, Heading, Text, Button, useColorModeValue } from "@chakra-ui/react";
 import dayjs from "dayjs";

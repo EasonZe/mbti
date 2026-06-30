@@ -1,3 +1,4 @@
+/* 中文标注：MBTI 测试题库数据，每道题包含 A/B 两个选项及对应计分维度。 */
 import { TestQuestion } from "../lib/personality-test";
 
 export const personalityTest: TestQuestion[] = [

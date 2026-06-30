@@ -1,3 +1,4 @@
+/* 中文标注：8 个 MBTI 基础维度数据，包含 E/I/S/N/T/F/J/P 的名称和说明。 */
 import { PersonalityClass } from "../lib/personality-test";
 
 export const personalityClasses: PersonalityClass[] = [

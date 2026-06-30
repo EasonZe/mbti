@@ -1,3 +1,4 @@
+/* 中文标注：MBTI 测试核心工具，包含计分、结果类型计算、本地数据库读写。 */
 import { openDB } from "idb";
 import { Option, Future, Result } from "@swan-io/boxed";
 import { personalityTest } from "../data/personality-test";
@@ -101,6 +102,7 @@ async function getDb() {
   return db;
 }
 
+// 中文标注：根据题号和 A/B 选项得到这一题对应的 MBTI 维度得分。
 export function getQuestionAnswerScore(
   questionNumber: number,
   answerOption: TestAnswerOption["type"]
@@ -113,6 +115,7 @@ export function getQuestionAnswerScore(
     .score;
 }
 
+// 中文标注：把所有题目的得分统计成最终四个字母类型，例如 INFP、ESTJ。
 export function getPersonalityClassGroupByTestScores(
   testScores: PersonalityClass["type"][]
 ) {
@@ -146,6 +149,7 @@ export function getPersonalityClassGroupByTestScores(
   )!;
 }
 
+// 中文标注：按测试时间戳读取某一次测试结果，用于结果详情页。
 export function getSavedTestResult(id: number) {
   return Future.make<Result<Option<TestResult>, Error>>((resolve) => {
     getDb()
@@ -156,6 +160,7 @@ export function getSavedTestResult(id: number) {
   });
 }
 
+// 中文标注：读取所有历史测试结果，用于测试历史页。
 export function getAllSavedTestResult() {
   return Future.make<Result<Option<TestResult[]>, Error>>((resolve) => {
     getDb()
@@ -166,6 +171,7 @@ export function getAllSavedTestResult() {
   });
 }
 
+// 中文标注：保存一次完整测试结果，用于后续查看历史记录。
 export function saveTestResult(testResult: {
   timestamp: number;
   testAnswers: TestAnswerOption["type"][];

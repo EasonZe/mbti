@@ -1,3 +1,4 @@
+/* 中文标注：首页页面，展示主视觉卡片、开始测试按钮、鸣谢和来源信息。 */
 import Link from "next/link";
 import { Heading, Text, Highlight, Flex, Button, Box, Link as ChakraLink, useColorModeValue } from "@chakra-ui/react";
 import { FiArrowRight } from "react-icons/fi";
@@ -5,9 +6,11 @@ import { FiArrowRight } from "react-icons/fi";
 import MainLayout from "../components/layouts/main-layout";
 import { withBasePath } from "../lib/asset-path";
 
+// 中文标注：首页主组件。
 export default function HomePage() {
   const cardBg = useColorModeValue("rgba(255, 255, 255, .76)", "rgba(18, 25, 31, .62)");
   const cardImage = withBasePath("/images/home-bottom.png");
+  // 中文标注：首页卡片背景图，深浅色分别叠加不同透明度遮罩。
   const cardBackground = useColorModeValue(
     `linear-gradient(180deg, rgba(255,255,255,.70), rgba(239,247,252,.56)), url(${cardImage})`,
     `linear-gradient(180deg, rgba(9,16,24,.44), rgba(9,16,24,.30)), url(${cardImage})`
@@ -30,9 +33,9 @@ export default function HomePage() {
       >
         <Box
           w="min(820px, 100%)"
-          minH={{ base: "360px", md: "450px" }}
+          minH={{ base: "360px", md: "540px" }}
           px={{ base: 5, md: 9 }}
-          py={{ base: 6, md: 8 }}
+          py={{ base: 6, md: 10 }}
           border="1px solid"
           borderColor={borderColor}
           rounded="32px"
@@ -52,8 +55,7 @@ export default function HomePage() {
             bgRepeat="no-repeat"
             bgSize="cover"
             bgPosition="center center"
-            transform="scale(1.03)"
-            filter={useColorModeValue("blur(18px)", "blur(12px)")}
+            transform="scale(1.0)"
           />
           <Box
             position="absolute"
@@ -103,6 +105,7 @@ export default function HomePage() {
             </Button>
           </Link>
 
+          {/* 中文标注：免费声明、鸣谢、作者和来源区域。 */}
           <Box
             mt={5}
             px={{ base: 3, md: 4 }}

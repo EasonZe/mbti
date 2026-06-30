@@ -1,3 +1,4 @@
+/* 中文标注：结果页左侧分数统计组件，展示 E/I/S/N/T/F/J/P 各维度得分。 */
 import { Flex, Text, Heading, useColorModeValue } from "@chakra-ui/react";
 
 import { personalityClasses } from "../../data/personality-classes";

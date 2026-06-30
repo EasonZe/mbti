@@ -1,3 +1,4 @@
+/* 中文标注：测试结果正文组件，展示 MBTI 类型、图片、说明文字和重新测试按钮。 */
 import Link from "next/link";
 import {
   Flex,

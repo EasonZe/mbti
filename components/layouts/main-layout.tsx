@@ -1,3 +1,4 @@
+/* 中文标注：全站主布局组件，统一处理 Head、背景、顶部栏、主体内容和页脚。 */
 import Head from "next/head";
 import { ReactNode } from "react";
 import { Flex, Box, useColorModeValue } from "@chakra-ui/react";
@@ -14,6 +15,7 @@ interface MainLayoutProps {
   hideFooter?: boolean;
 }
 
+// 中文标注：所有页面都套这个布局，便于统一背景、导航栏和页脚。
 export default function MainLayout(props: MainLayoutProps) {
   const pageBg = useColorModeValue("#edf6fb", "#091018");
   const pageColor = useColorModeValue("#17232c", "whiteAlpha.900");
@@ -33,6 +35,7 @@ export default function MainLayout(props: MainLayoutProps) {
         bg={pageBg}
         color={pageColor}
       >
+        {/* 中文标注：可通过 hideBackground 关闭背景，当前页面默认开启。 */}
         {!props.hideBackground && <EasonBackground />}
         <Box
           position="relative"

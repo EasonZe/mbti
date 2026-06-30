@@ -1,3 +1,4 @@
+/* 中文标注：测试历史页面路由，读取本地保存的所有测试记录。 */
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Option, AsyncData, Result } from "@swan-io/boxed";

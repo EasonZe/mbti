@@ -1,3 +1,4 @@
+/* 中文标注：单个答题选项组件，负责显示 A/B 选项并处理用户点击。 */
 import { useRadio, Box, useColorModeValue } from "@chakra-ui/react";
 
 export default function TestAnswerOption(props: any) {

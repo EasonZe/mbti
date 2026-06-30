@@ -1,3 +1,4 @@
+/* 中文标注：结果页右侧目录组件，点击可快速跳到结果文章对应段落。 */
 import Link from "next/link";
 import { MouseEvent, useState, useEffect } from "react";
 import { Flex, Text, UnorderedList, ListItem, useColorModeValue } from "@chakra-ui/react";

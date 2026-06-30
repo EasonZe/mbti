@@ -1,3 +1,4 @@
+/* 中文标注：答题计时器组件，从进入测试页开始计时。 */
 import { useState, useEffect } from "react";
 import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
 import { FiClock } from "react-icons/fi";

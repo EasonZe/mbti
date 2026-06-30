@@ -1,3 +1,4 @@
+/* 中文标注：核心答题组件，负责题目切换、保存答案、计算并跳转结果页。 */
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { useRadioGroup, Flex, Text, Button, useColorModeValue } from "@chakra-ui/react";
@@ -13,6 +14,7 @@ import {
 } from "../../lib/personality-test";
 import useUserTestAnswersStore from "../../store/use-user-test-answers";
 
+// 中文标注：显示当前题目，并根据用户选择记录答案。
 export default function TestQuestion() {
   const router = useRouter();
   const secondaryButtonBg = useColorModeValue("rgba(255,255,255,.62)", "rgba(255,255,255,0.08)");
